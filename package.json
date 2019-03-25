@@ -1,0 +1,19 @@
+{
+  "name": "Flexo",
+  "version": "1.0.0",
+  "description": "Light grid based on CSS Flex rule.",
+  "main": "index.js",
+  "repository": "https://github.com/theMartux/flexo.git",
+  "author": "theMartux <work@davidemartucci.it>",
+  "license": "Davide Martucci",
+  "dependencies": {
+    "gulp": "^4.0.0"
+  },
+  "devDependencies": {
+    "del": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
