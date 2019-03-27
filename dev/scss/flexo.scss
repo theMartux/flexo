@@ -1,11 +1,215 @@
-/* CSS Document */
+/* CSS Flexo */
+@import '_mixin.scss';
 
 body,html
 {
 	margin: 0;
 	padding: 0;
+	position: relative;
+	@if($containerOverflowX == 1)
+	{
+		max-width: 100vw;
+		overflow-x: hidden;
+
+	}
+	min-height: 100vh;
+	&.border
+	{
+		.fl-box
+		{
+			border: 1px solid #fff;
+		}
+	}
 }
+
+@include wireframe(sm,$bgSmColor,body);
+@if($transition == 1)
+{
+	div
+	{
+		transition: width $transitionTime $transitionEasing,margin-left $transitionTime $transitionEasing;
+	}
+	
+}
+
+
+
+
+
+
+
+
+@include positioningAndFill(); 
 .container
 {
 	width: 100%;
+	margin: auto;
+	&.fluid
+	{
+		width: 100%;
+	}
 }
+.row
+{
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	margin: auto;
+	&.fluid
+	{
+		width: 100%;
+	}
+	&.justify-center
+	{
+		justify-content: center;
+	}
+	&.justify-left
+	{
+		justify-content: flex-start;
+	}
+	&.justify-right
+	{
+		justify-content: flex-end;
+	}
+	&.space-around
+	{
+		justify-content: space-around
+	}
+	&.space-between
+	{
+		justify-content: space-between
+	}
+	&.align-center
+	{
+		align-items: center
+	}
+	&.align-top
+	{
+		align-items: flex-start
+	}
+	&.align-bottom
+	{
+		align-items: flex-end
+	}
+	&.wrap
+	{
+		flex-wrap: wrap
+	}
+	&.wrap-reverse
+	{
+		flex-wrap: wrap-reverse
+	}
+	&.row-reverse
+	{
+		flex-direction: row-reverse
+	}
+	&.no-padding
+	{
+		.fl-box,.fl-box-in
+		{
+			padding: 0;
+		}
+	}
+}
+.fl-flex
+{
+	flex: 1
+}
+.fl-box
+{
+	padding: $flBoxPadding;
+	box-sizing: border-box;
+	&.self-top
+	{
+		align-self: flex-start
+	}
+	&.self-center
+	{
+		align-self: center
+	}
+	&.self-bottom
+	{
+		align-self: flex-end
+	}
+	&.no-padding
+	{
+		padding: 0;
+	}
+	
+}
+.fl-box-in
+{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding:$flBoxPaddingIn;
+	&.no-padding
+	{
+		padding: 0;
+	}
+}
+
+@include z-index();
+@include box-flex();
+@include box-small();
+@include visibility(sm,0,nth($mediaQuery,1));
+@include visibility(md,nth($mediaQuery,1),nth($mediaQuery,2));
+@include visibility(lg,nth($mediaQuery,2),nth($mediaQuery,3));
+@include visibility(sp,nth($mediaQuery,3),nth($mediaQuery,4));
+@include visibility(mg,nth($mediaQuery,4),nth($mediaQuery,5));
+@include visibility(ut,nth($mediaQuery,5),$mediaQueryMAX);
+
+@media only screen and (min-width:nth($mediaQuery,1))
+{
+	@include box-medium();
+	@include wireframe(md,$bgMdColor,body);
+	
+	
+}
+@media only screen and (min-width:nth($mediaQuery,2))
+{
+	@include box-large();
+}
+@media only screen and (min-width:nth($mediaQuery,3))
+{
+	@include box-super();
+}
+@media only screen and (min-width:nth($mediaQuery,4))
+{
+	.container
+	{
+		width: nth($mediaQuery,4);
+		&.row:first-child
+		{
+			width: nth($mediaQuery,4);
+		}
+	}
+	@include box-mega();
+}
+@media only screen and (min-width:nth($mediaQuery,5))
+{
+	@include box-ultra();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

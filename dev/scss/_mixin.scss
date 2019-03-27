@@ -1,2 +1,303 @@
 /* CSS Document */
 
+@import '_config.scss';
+
+@mixin positioningAndFill()
+{
+	.position-relative
+	{
+		position: relative;
+	}
+	.position-absolute
+	{
+		position: absolute
+	}
+	.position-fixed
+	{
+		position: fixed
+	}
+	.top-left
+	{
+		top: 0;
+		left: 0;
+	}
+	.top-right
+	{
+		top: 0;
+		right: 0;
+	}
+	.bottom-left
+	{
+		bottom: 0;
+		left: 0;
+	}
+	.bottom-right
+	{
+		bottom: 0;
+		right: 0;
+	}
+	.no-padding
+	{
+		padding: 0;
+	}
+	.no-margin
+	{
+		margin: 0;
+	}
+	.fill-vp
+	{
+		width: 100vw;
+		height: 100vh;
+	}
+	.fill-vp-h
+	{
+		width: 100vw;
+	}
+	.fill-vp-v
+	{
+		height: 100vw;
+	}
+	.fill
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.fill-width
+	{
+		width: 100%;
+	}
+	.fill-height
+	{
+		height: 100%;
+	}
+}
+
+@mixin box-small()
+{
+	
+	@for $i from 1 through 12
+	{
+		.fl-sm-#{$i} 
+		{
+			width: $i/12*100%;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-sm-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-sm-offset-#{$i} 
+		{
+			margin-left: $i/12*100%;
+		}
+	}
+}
+@mixin box-medium()
+{
+	
+	@for $i from 1 through 12
+	{
+		.fl-md-#{$i} 
+		{
+			width: $i/12*100%;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-md-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-md-offset-#{$i} 
+		{
+			margin-left: $i/12*100%;
+		}
+	}
+   
+}
+@mixin box-large()
+{
+	
+	@for $i from 1 through 12
+	{
+		.fl-lg-#{$i} 
+		{
+			width: $i/12*100%;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-lg-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-lg-offset-#{$i} 
+		{
+			margin-left: $i/12*100%;
+		}
+	}
+   
+}
+@mixin box-super()
+{
+	
+	@for $i from 1 through 12
+	{
+		.fl-sp-#{$i} 
+		{
+			width: $i/12*100%;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-sp-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-sp-offset-#{$i} 
+		{
+			margin-left: $i/12*100%;
+		}
+	}
+   
+}
+@mixin box-mega()
+{
+	
+	@for $i from 1 through 12
+	{
+		.fl-mg-#{$i} 
+		{
+			width: $i/12*100%;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-mg-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-mg-offset-#{$i} 
+		{
+			margin-left: $i/12*100%;
+		}
+	}
+   
+}
+@mixin box-ultra()
+{
+	
+	@for $i from 1 through 12
+	{
+		.fl-ut-#{$i} 
+		{
+			width: $i/12*100%;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-ut-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through 12
+	{
+		.fl-ut-offset-#{$i} 
+		{
+			margin-left: $i/12*100%;
+		}
+	}
+   
+}
+
+@mixin box-flex()
+{
+	
+	@for $i from 1 through 12
+	{
+		.fl-flex-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin z-index()
+{
+	$zStart:nth($Z__index,1);
+	$zEnd:nth($Z__index,2);
+	@for $zStart from $zStart through $zEnd
+	{
+		.z-index-#{$zStart} 
+		{
+			z-index: $zStart;
+		}
+	}
+   
+}
+@mixin visibility($bp,$mStart,$mEnd)
+{
+	
+	@media only screen and (min-width:$mStart) and (max-width:$mEnd)
+	{
+		.fl-#{$bp}-hidden
+		{
+			display: none;
+		}
+	}
+   
+}
+
+@mixin wireframe($bp,$listBg,$el)
+{
+	    #{$el}#wireframe-fill
+		{
+			@for $i from 1 through 12
+			{
+				.fl-#{$bp}-#{$i} 
+				{
+					.fl-box-in
+					{
+						background-color: nth($listBg,$i);
+					}
+				}
+			}
+		}
+		#{$el}#wireframe
+		{
+			@for $i from 1 through 12
+			{
+				.fl-#{$bp}-#{$i} 
+				{
+					.fl-box-in
+					{
+						border: 1px solid nth($listBg,$i);
+					}
+				}
+			}
+		}
+}
+
+
+
+
+
+
