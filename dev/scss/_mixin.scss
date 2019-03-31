@@ -71,54 +71,53 @@
 		height: 100%;
 	}
 }
-
 @mixin box-small()
 {
 	
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-sm-#{$i} 
 		{
-			width: $i/12*100%;
+			width: $i/$box*100%;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-sm-order-#{$i} 
 		{
 			order: $i;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-sm-offset-#{$i} 
 		{
-			margin-left: $i/12*100%;
+			margin-left: $i/$box*100%;
 		}
 	}
 }
 @mixin box-medium()
 {
 	
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-md-#{$i} 
 		{
-			width: $i/12*100%;
+			width: $i/$box*100%;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-md-order-#{$i} 
 		{
 			order: $i;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-md-offset-#{$i} 
 		{
-			margin-left: $i/12*100%;
+			margin-left: $i/$box*100%;
 		}
 	}
    
@@ -126,25 +125,25 @@
 @mixin box-large()
 {
 	
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-lg-#{$i} 
 		{
-			width: $i/12*100%;
+			width: $i/$box*100%;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-lg-order-#{$i} 
 		{
 			order: $i;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-lg-offset-#{$i} 
 		{
-			margin-left: $i/12*100%;
+			margin-left: $i/$box*100%;
 		}
 	}
    
@@ -152,25 +151,25 @@
 @mixin box-super()
 {
 	
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-sp-#{$i} 
 		{
-			width: $i/12*100%;
+			width: $i/$box*100%;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-sp-order-#{$i} 
 		{
 			order: $i;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-sp-offset-#{$i} 
 		{
-			margin-left: $i/12*100%;
+			margin-left: $i/$box*100%;
 		}
 	}
    
@@ -178,25 +177,25 @@
 @mixin box-mega()
 {
 	
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-mg-#{$i} 
 		{
-			width: $i/12*100%;
+			width: $i/$box*100%;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-mg-order-#{$i} 
 		{
 			order: $i;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-mg-offset-#{$i} 
 		{
-			margin-left: $i/12*100%;
+			margin-left: $i/$box*100%;
 		}
 	}
    
@@ -204,34 +203,33 @@
 @mixin box-ultra()
 {
 	
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-ut-#{$i} 
 		{
-			width: $i/12*100%;
+			width: $i/$box*100%;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-ut-order-#{$i} 
 		{
 			order: $i;
 		}
 	}
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-ut-offset-#{$i} 
 		{
-			margin-left: $i/12*100%;
+			margin-left: $i/$box*100%;
 		}
 	}
    
 }
-
 @mixin box-flex()
 {
 	
-	@for $i from 1 through 12
+	@for $i from 1 through $box
 	{
 		.fl-flex-#{$i} 
 		{
@@ -265,35 +263,227 @@
 	}
    
 }
-
-@mixin wireframe($bp,$listBg,$el)
+@mixin flexBox()
 {
-	    #{$el}#wireframe-fill
+	.container
+	{
+		width: 100%;
+		margin: auto;
+		&.fluid
 		{
-			@for $i from 1 through 12
+			width: 100%;
+		}
+	}
+	.row
+	{
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		margin: auto;
+		&.fluid
+		{
+			width: 100%;
+		}
+		&.justify-center
+		{
+			justify-content: center;
+		}
+		&.justify-left
+		{
+			justify-content: flex-start;
+		}
+		&.justify-right
+		{
+			justify-content: flex-end;
+		}
+		&.space-around
+		{
+			justify-content: space-around
+		}
+		&.space-between
+		{
+			justify-content: space-between
+		}
+		&.align-center
+		{
+			align-items: center
+		}
+		&.align-top
+		{
+			align-items: flex-start
+		}
+		&.align-bottom
+		{
+			align-items: flex-end
+		}
+		&.wrap
+		{
+			flex-wrap: wrap
+		}
+		&.wrap-reverse
+		{
+			flex-wrap: wrap-reverse
+		}
+		&.row-reverse
+		{
+			flex-direction: row-reverse
+		}
+		&.no-padding
+		{
+			.fl-box,.fl-box-in
 			{
-				.fl-#{$bp}-#{$i} 
+				padding: 0;
+			}
+		}
+	}
+	.fl-flex
+	{
+		flex: 1
+	}
+	.fl-box
+	{
+		padding: $flBoxPadding;
+		box-sizing: border-box;
+		&.self-top
+		{
+			align-self: flex-start
+		}
+		&.self-center
+		{
+			align-self: center
+		}
+		&.self-bottom
+		{
+			align-self: flex-end
+		}
+		&.no-padding
+		{
+			padding: 0;
+		}
+
+	}
+	.fl-box-in
+	{
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		padding:$flBoxPaddingIn;
+		&.no-padding
+		{
+			padding: 0;
+		}
+}
+}
+@mixin wireframe()
+{
+	
+	body
+	{
+		&#wireframe
+		{
+			border: 1px solid nth($wireframeColor,1);	
+			.container
+			{
+				border: 1px solid nth($wireframeColor,2);	
+			}
+			.row
+			{
+				border: 1px solid nth($wireframeColor,2);	
+			}
+			@for $y from 1 through $box
+			{
+				.fl-sm-#{$y}
 				{
 					.fl-box-in
 					{
-						background-color: nth($listBg,$i);
+						border: 1px solid nth($wireframeColor,4);
+					}
+					.fl-box-in::before
+					{
+						content: ' #sm '+$y;
+						color:$wireframeColorLegend;
+						font-weight: bolder;
+					}
+				}
+				.fl-flex-#{$y}
+				{
+					.fl-box-in
+					{
+						border: 1px solid $wireframeFlex;
+					}
+				}
+			}
+			@for $i from 1 through 4
+			{
+				@media only screen and (min-width:nth($mediaQuery,$i))
+				{
+					@for $j from 1 through $box
+					{
+						.fl-#{nth($bp, $i+1 )}-#{$j}
+						{
+							.fl-box-in
+							{
+								border: 1px solid nth($wireframeColor,($i+4));
+							}
+							.fl-box-in::before
+							{
+								content: '#'+ nth($bp,$i+1) +' '+ $j;
+								color: $wireframeColorLegend;
+								font-weight: bolder;
+							}
+						}
 					}
 				}
 			}
 		}
-		#{$el}#wireframe
+		&#wireframe-fill
 		{
-			@for $i from 1 through 12
+			background-color: nth($wireframeColor,1);	
+			.container
 			{
-				.fl-#{$bp}-#{$i} 
+				background-color: nth($wireframeColor,2);	
+			}
+			.row
+			{
+				background-color: nth($wireframeColor,2);	
+			}
+			@for $y from 1 through $box
+			{
+				.fl-sm-#{$y}
 				{
 					.fl-box-in
 					{
-						border: 1px solid nth($listBg,$i);
+						background-color: nth($wireframeColor,4);
+					}
+				}
+				.fl-flex-#{$y}
+				{
+					.fl-box-in
+					{
+						background-color: $wireframeFlex;
+					}
+				}
+			}
+			@for $i from 1 through 4
+			{
+				@media only screen and (min-width:nth($mediaQuery,$i))
+				{
+					@for $j from 1 through $box
+					{
+						.fl-#{nth($bp,$i)}-#{$j}
+						{
+							.fl-box-in
+							{
+								background-color: nth($wireframeColor,($i+4));
+							}
+						}
 					}
 				}
 			}
 		}
+	}
+	
+	
 }
 
 
