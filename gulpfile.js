@@ -30,7 +30,7 @@ function cssFlexo(done)
 	src([paths.dev_scss + 'flexo.scss'])
 		.pipe(sass())
 		.pipe(concat('flexo.css'))
-		.pipe(cssmin())
+		//.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(dest(paths.dist_css));
 
