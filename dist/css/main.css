@@ -68,7 +68,7 @@ a.link-int
 }
 .box-conatiner-box .fl-box-in
 {
-	background-color: #7D96FF;height: 40px;
+	background-color: #7D96FF;height: 60px;
 }
 .box-conatiner-box
 {
@@ -76,12 +76,32 @@ a.link-int
 	margin-top: 20px;
 	padding: 10px
 }
+.box-conatiner-box.another
+{
+	margin-top: 0px;
+	
+}
 .box-conatiner-code
 {
 	background-color: #333333;
 	margin-top: 5px;
 }
-
+h5
+{
+	font-size: 1rem;
+	color: #7D96FF;
+	margin-top: 10px;
+}
+.row.height-fix
+{
+	height: 200px;
+}
+.absolute-ex
+{
+	background-color: slateblue;
+	padding: 20px;
+	color: #fff;
+}
 @media only screen and (min-width:780px)
 {
 	header
