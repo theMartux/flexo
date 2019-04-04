@@ -226,12 +226,72 @@
 	}
    
 }
-@mixin box-flex()
+@mixin box-flex-sm()
 {
 	
 	@for $i from 1 through $box
 	{
-		.fl-flex-#{$i} 
+		.fl-flex-sm-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-md()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-md-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-lg()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-lg-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-sp()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-sp-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-mg()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-mg-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-ut()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-ut-#{$i} 
 		{
 			flex: $i;
 		}
@@ -435,6 +495,37 @@
 					}
 				}
 			}
+			header,ul,li,nav
+			{
+				border: 1px solid nth($wireframeColor,1);
+				color:$wireframeColorLegend;
+				font-weight: bolder;
+			}
+			header::before
+			{
+				content: '#Header';
+				color:$wireframeColorLegend;
+				font-weight: bolder;
+			}
+			ul::before
+			{
+				content: '#Ul';
+				color:$wireframeColorLegend;
+				font-weight: bolder;
+			}
+			nav::before
+			{
+				content: '#Nav';
+				color:$wireframeColorLegend;
+				font-weight: bolder;
+			}
+			main::before
+			{
+				content: '#Main';
+				color:$wireframeColorLegend;
+				font-weight: bolder;
+			}
+			
 		}
 		&#wireframe-fill
 		{

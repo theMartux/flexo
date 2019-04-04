@@ -92,7 +92,7 @@ ul
 @include flexBox();
 @include positioningAndFill(); 
 @include z-index();
-@include box-flex();
+@include box-flex-sm();
 @include box-small();
 @include visibility(sm,0,nth($mediaQuery,1));
 @include visibility(md,nth($mediaQuery,1),nth($mediaQuery,2));
@@ -103,7 +103,7 @@ ul
 @media only screen and (min-width:nth($mediaQuery,1))
 {
 	@include box-medium();
-	
+	@include box-flex-md()
 	
 }
 @media only screen and (min-width:nth($mediaQuery,2))
