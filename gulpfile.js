@@ -17,7 +17,9 @@ const del    = require('del');
 const paths  = 
 {
 	'dev_scss': 'dev/scss/',
-	'dist_css': 'dist/css/'
+	'dev_css':  'dev/css/',
+	'dist_css': 'dist/css/',
+	'download': 'download/'
 };
 
 function clean() 
@@ -25,9 +27,14 @@ function clean()
 	return del([paths.dist_css + "flexo.min.css",
 	]);
 }
+function cleanDev() 
+{
+	return del([paths.dev_css + "flexo.css",
+	]);
+}
 function cleanZip() 
 {
-	return del([paths.dist_css + "flexo.zip",
+	return del([paths.download + "flexo.zip",
 	]);
 }
 
@@ -42,12 +49,21 @@ function cssFlexo(done)
 
 	done();
 }
-
-function zipCSS(done) 
+function cssFlexoDev(done) 
 {
-	src(['./dist/css/**/!(main.css)','./dev/scss/**/!(_config-custom.scss|config-custom.css)'],{base: './'})
+	src([paths.dev_scss + 'flexo.scss'])
+		.pipe(sass())
+		.pipe(concat('flexo.css'))
+		.pipe(dest(paths.dev_css));
+
+	done();
+}
+
+function zipFlexo(done) 
+{
+	src([paths.download + '/dist/css/*.css',paths.download + '/dev/**/*.*'],{base: './'})
 	    .pipe(zip('flexo.zip'))
-		.pipe(dest(paths.dist_css));
+		.pipe(dest(paths.download));
 
 	done();
 }
@@ -60,6 +76,7 @@ function watchCSS()
 			paths.dev_scss + '_config.scss'], parallel(cssFlexo));
 }
 
-exports.wcss    = parallel(watchCSS);
-exports.zip     = series(cleanZip, parallel(zipCSS));
-exports.default = series(clean, parallel(cssFlexo));
+exports.wcss      = parallel(watchCSS);
+exports.zip_flexo = series(cleanZip, parallel(zipFlexo));
+exports.default   = series(clean, parallel(cssFlexo));
+exports.flexo_dev = series(cleanDev, parallel(cssFlexoDev));
