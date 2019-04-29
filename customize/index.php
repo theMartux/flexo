@@ -1,3 +1,4 @@
+<?php require_once('../PHP/config.php') ?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -11,29 +12,7 @@
 	
 </head>
 <body id="" class="">
-	<header class="position-fixed fill-vp-h">
-		<div class="container fluid">
-			<div class="row fluid align-center">
-				<div class="fl-box fl-sm-4">
-					<div class="fl-box-in">
-						<img id="logo-flexo" src="../img/flexo-css-logo.png" alt="Flexo css logo" title="Flexo css logo"/>
-					</div>
-				</div>
-				<div class="fl-box fl-sm-4 fl-sm-offset-4 text-right">
-					<div class="fl-box-in">
-						<nav>
-							<ul>
-								<li><a href="" title="Donate">Wireframe</a></li>
-								<li><a href="" title="Documentation">Documentation</a></li>
-								<li><a href="" title="Tutorial">Tutorial</a></li>
-								<li><a href="" title="Donate">Donate</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+	<?php require_once('../PHP/partial/header.php') ?>
 	<main>
 		<div class="container fluid">
 			<div class="row block">
@@ -43,7 +22,7 @@
 							<div class="fl-box fl-sm-12">
 								<div class="fl-box-in">
 									<h1>
-										Custom.
+										Customize.
 									</h1>
 									<h2>
 										Create the css file and use it.
@@ -60,8 +39,8 @@
 							</div>
 							<div class="fl-box fl-sm-10 fl-md-8">
 								<div class="fl-box-in">
-									<a class="link-int" href="#" title="">Minify</a>
-									<a class="link-int" href="#" title="">Dev</a>
+									<a id="customize-min" class="link-int" href="#" title="Use in distribution">No Wireframe</a>
+									<a id="customize-dev" class="link-int" href="#" title="Use in development">Wireframe</a>
 								</div>
 							</div>
 							<div class="fl-box  fl-sm-12" id="customize">
@@ -69,13 +48,17 @@
 									<h3>
 										Compile the form and download
 									</h3>
-									<form method="post" action="../PHP/compiler-scss.php">
-										<div class="row fluid row-input">
+									<form method="post" action="../PHP/compiler-scss.php" id="form-customize">
+										<input type="hidden" name="dev_min" id="dev-min" value="" />
+										<div class="row wrap fluid row-input">
 											<div class="fl-box fl-sm-6 fl-lg-2">
 												<div class="fl-box-in no-padding">
 													<label>Box number</label>
-													<input class="input" type="text" name="box" placeholder="Default is 12" value="12"/>
+													<input class="input" type="text" name="box" placeholder="Default is 12"/>
 												</div>
+											</div>
+											<div class="fl-box fl-sm-12">
+												<p>Set the page columns number. | <span>Default: 12</span></p>
 											</div>
 										</div>
 										<div class="row wrap fluid row-input">
@@ -109,6 +92,9 @@
 													<input class="input" type="text" name="media-query-ut" placeholder="Default is 1920px" />
 												</div>
 											</div>
+											<div class="fl-box fl-sm-12">
+												<p>Set the breakpoints for devices length. | <span>Default: 780px(md), 1240px(lg), 1460px(sp), 1680px(mg), 1920px(ut) </span></p>
+											</div>
 										</div>
 										<div class="row wrap fluid row-input">
 											<div class="fl-box fl-sm-6 fl-lg-4">
@@ -122,6 +108,9 @@
 													<label>Padding box in</label>
 													<input class="input" type="text" name="padding-box-in" placeholder="Default is 10px 10px" />
 												</div>
+											</div>
+											<div class="fl-box fl-sm-12">
+												<p>Set the padding in fl-box class. | <span>Default: 3px 3px(padding box), 10px 10px(padding box in) </span></p>
 											</div>
 										</div>
 										<div class="row wrap fluid row-input">
@@ -177,6 +166,7 @@
 			</div>
 		</div>
 	</main>
+	<script src="../dist/js/customize.js"></script>
 </body>
 </html>
 
