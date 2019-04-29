@@ -7,7 +7,8 @@
   "author": "theMartux <work@davidemartucci.it>",
   "license": "Davide Martucci",
   "dependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulp-zip": "^4.2.0"
   },
   "devDependencies": {
     "del": "^4.0.0",
