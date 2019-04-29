@@ -1,5 +1,3 @@
-
-
 @mixin positioningAndFill()
 {
 	.position-relative
@@ -617,14 +615,14 @@
 				}
 				@for $y from 1 through $box
 				{
-					.fl-sm-#{$y}
+					.fl-sm-#{$y} >
 					{
 						.fl-box-in
 						{
 							background-color: nth($wireframeColor,4);
 						}
 					}
-					.fl-flex-sm-#{$y}
+					.fl-flex-sm-#{$y} >
 					{
 						.fl-box-in
 						{
@@ -638,14 +636,14 @@
 					{
 						@for $j from 1 through $box
 						{
-							.fl-#{nth($bp,($i+1))}-#{$j}
+							.fl-#{nth($bp,($i+1))}-#{$j} >
 							{
 								.fl-box-in
 								{
 									background-color: nth($wireframeColor,($i+4));
 								}
 							}
-							.fl-flex-#{nth($bp,($i+1))}-#{$j}
+							.fl-flex-#{nth($bp,($i+1))}-#{$j} >
 							{
 								.fl-box-in
 								{

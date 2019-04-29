@@ -108,11 +108,13 @@ ul
 @media only screen and (min-width:nth($mediaQuery,2))
 {
 	@include box-large();
+	@include box-flex-lg();
 	@include height-vp-lg();
 }
 @media only screen and (min-width:nth($mediaQuery,3))
 {
 	@include box-super();
+	@include box-flex-sp();
 	@include height-vp-sp();
 }
 @media only screen and (min-width:nth($mediaQuery,4))
@@ -130,11 +132,13 @@ ul
 		}
 	}
 	@include box-mega();
+	@include box-flex-mg();
 	@include height-vp-mg();
 }
 @media only screen and (min-width:nth($mediaQuery,5))
 {
 	@include box-ultra();
+	@include box-flex-ut();
 	@include height-vp-ut();
 }
 //######################## WIREFRAME MODULE !SOLO DEV!########################
