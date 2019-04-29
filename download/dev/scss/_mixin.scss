@@ -1,0 +1,667 @@
+@mixin positioningAndFill()
+{
+	.position-relative
+	{
+		position: relative;
+	}
+	.position-absolute
+	{
+		position: absolute
+	}
+	.position-fixed
+	{
+		position: fixed
+	}
+	.top-left
+	{
+		top: 0;
+		left: 0;
+	}
+	.top-right
+	{
+		top: 0;
+		right: 0;
+	}
+	.bottom-left
+	{
+		bottom: 0;
+		left: 0;
+	}
+	.bottom-right
+	{
+		bottom: 0;
+		right: 0;
+	}
+	.no-padding
+	{
+		padding: 0;
+	}
+	.no-margin
+	{
+		margin: 0;
+	}
+	.fill-vp
+	{
+		width: 100vw;
+		height: 100vh;
+	}
+	.fill-vp-h
+	{
+		width: 100vw;
+	}
+	.fill-vp-v
+	{
+		height: 100vw;
+	}
+	.fill
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.fill-width
+	{
+		width: 100%;
+	}
+	.fill-height
+	{
+		height: 100%;
+	}
+}
+@mixin box-small()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-sm-#{$i} 
+		{
+			width: $i/$box*100%;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-sm-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-sm-offset-#{$i} 
+		{
+			margin-left: $i/$box*100%;
+		}
+	}
+}
+@mixin box-medium()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-md-#{$i} 
+		{
+			width: $i/$box*100%;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-md-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-md-offset-#{$i} 
+		{
+			margin-left: $i/$box*100%;
+		}
+	}
+   
+}
+@mixin box-large()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-lg-#{$i} 
+		{
+			width: $i/$box*100%;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-lg-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-lg-offset-#{$i} 
+		{
+			margin-left: $i/$box*100%;
+		}
+	}
+   
+}
+@mixin box-super()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-sp-#{$i} 
+		{
+			width: $i/$box*100%;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-sp-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-sp-offset-#{$i} 
+		{
+			margin-left: $i/$box*100%;
+		}
+	}
+   
+}
+@mixin box-mega()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-mg-#{$i} 
+		{
+			width: $i/$box*100%;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-mg-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-mg-offset-#{$i} 
+		{
+			margin-left: $i/$box*100%;
+		}
+	}
+   
+}
+@mixin box-ultra()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-ut-#{$i} 
+		{
+			width: $i/$box*100%;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-ut-order-#{$i} 
+		{
+			order: $i;
+		}
+	}
+	@for $i from 1 through $box
+	{
+		.fl-ut-offset-#{$i} 
+		{
+			margin-left: $i/$box*100%;
+		}
+	}
+   
+}
+@mixin box-flex-sm()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-sm-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-md()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-md-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-lg()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-lg-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-sp()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-sp-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-mg()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-mg-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin box-flex-ut()
+{
+	
+	@for $i from 1 through $box
+	{
+		.fl-flex-ut-#{$i} 
+		{
+			flex: $i;
+		}
+	}
+   
+}
+@mixin z-index()
+{
+	$zStart:nth($Z_index,1);
+	$zEnd:nth($Z_index,2);
+	@for $zStart from $zStart through $zEnd
+	{
+		.z-index-#{$zStart} 
+		{
+			z-index: $zStart;
+		}
+	}
+   
+}
+@mixin visibility($bp,$mStart,$mEnd)
+{
+	
+	@media only screen and (min-width:$mStart) and (max-width:$mEnd)
+	{
+		.fl-#{$bp}-hidden
+		{
+			display: none;
+		}
+	}
+   
+}
+@mixin flexBox()
+{
+	.container
+	{
+		width: 100%;
+		margin: auto;
+		&.fluid
+		{
+			width: 100%;
+		}
+	}
+	.row
+	{
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		margin: auto;
+		&.fluid
+		{
+			width: 100%;
+		}
+		&.justify-center
+		{
+			justify-content: center;
+		}
+		&.justify-left
+		{
+			justify-content: flex-start;
+		}
+		&.justify-right
+		{
+			justify-content: flex-end;
+		}
+		&.space-around
+		{
+			justify-content: space-around
+		}
+		&.space-between
+		{
+			justify-content: space-between
+		}
+		&.align-center
+		{
+			align-items: center
+		}
+		&.align-top
+		{
+			align-items: flex-start
+		}
+		&.align-bottom
+		{
+			align-items: flex-end
+		}
+		&.wrap
+		{
+			flex-wrap: wrap
+		}
+		&.wrap-reverse
+		{
+			flex-wrap: wrap-reverse
+		}
+		&.row-reverse
+		{
+			flex-direction: row-reverse
+		}
+		&.no-padding
+		{
+			.fl-box,.fl-box-in
+			{
+				padding: 0;
+			}
+		}
+	}
+	.fl-flex
+	{
+		flex: 1
+	}
+	.fl-box
+	{
+		padding: $flBoxPadding;
+		box-sizing: border-box;
+		&.self-top
+		{
+			align-self: flex-start
+		}
+		&.self-center
+		{
+			align-self: center
+		}
+		&.self-bottom
+		{
+			align-self: flex-end
+		}
+		&.no-padding
+		{
+			padding: 0;
+		}
+
+	}
+	.fl-box-in
+	{
+		
+		box-sizing: border-box;
+		padding:$flBoxPaddingIn;
+		&.no-padding
+		{
+			padding: 0;
+		}
+}
+}
+@mixin height-vp-sm()
+{
+	@for $i from 1 through 10
+	{
+		.vph-sm-#{$i}0 
+		{
+			min-height: $i*10vh;
+		}
+	}
+}
+@mixin height-vp-md()
+{
+	@for $i from 1 through 10
+	{
+		.vph-md-#{$i}0 
+		{
+			min-height: $i*10vh;
+		}
+	}
+}
+@mixin height-vp-lg()
+{
+	@for $i from 1 through 10
+	{
+		.vph-lg-#{$i}0
+		{
+			min-height: $i*10vh;
+		}
+	}
+}
+@mixin height-vp-sp()
+{
+	@for $i from 1 through 10
+	{
+		.vph-sp-#{$i}0
+		{
+			min-height: $i*10vh;
+		}
+	}
+}
+@mixin height-vp-mg()
+{
+	@for $i from 1 through 10
+	{
+		.vph-mg-#{$i}0
+		{
+			min-height: $i*10vh;
+		}
+	}
+}
+@mixin height-vp-ut()
+{
+	@for $i from 1 through 10
+	{
+		.vph-ut-#{$i}0
+		{
+			min-height: $i*10vh;
+		}
+	}
+}
+@mixin wireframe()
+{
+	@if($wireframeStatus == 1)
+	{
+		body
+		{
+			&#wireframe
+			{
+				border: 1px solid nth($wireframeColor,1);	
+				.container
+				{
+					border: 1px solid nth($wireframeColor,2);	
+				}
+				.row
+				{
+					border: 1px solid nth($wireframeColor,2);	
+				}
+				@for $y from 1 through $box
+				{
+					.fl-sm-#{$y} >
+					{
+						.fl-box-in
+						{
+							border: 1px solid nth($wireframeColor,4);
+						}
+						.fl-box-in::before
+						{
+							content: ' #sm '+$y;
+							color:$wireframeColorLegend;
+							font-weight: bolder;
+						}
+					}
+					.fl-flex-sm-#{$y} >
+					{
+						.fl-box-in
+						{
+							border: 1px solid $wireframeFlex;
+						}
+						.fl-box-in::before
+						{
+							content: ' #flex sm '+$y;
+							color:$wireframeColorLegend;
+							font-weight: bolder;
+						}
+					}
+				}
+				@for $i from 1 through 5
+				{
+					@media only screen and (min-width:nth($mediaQuery,$i))
+					{
+						@for $j from 1 through $box
+						{
+							.fl-#{nth($bp, ($i+1))}-#{$j} >
+							{
+								.fl-box-in
+								{
+									border: 1px solid nth($wireframeColor,($i+4));
+								}
+								.fl-box-in::before
+								{
+									content: '#'+ nth($bp,$i+1) +' '+ $j;
+									color: $wireframeColorLegend;
+									font-weight: bolder;
+								}
+							}
+						   .fl-flex-#{nth($bp, ($i+1))}-#{$j} >
+							{
+								.fl-box-in
+								{
+									border: 1px solid nth($wireframeColor,($i+4));
+								}
+								.fl-box-in::before
+								{
+									content: '#flex'+ nth($bp,($i+1)) +' '+ $j;
+									color: $wireframeColorLegend;
+									font-weight: bolder;
+								}
+							}
+						}
+					}
+				}
+				header,ul,li,nav
+				{
+					border: 1px solid nth($wireframeColor,1);
+					color:$wireframeColorLegend;
+					font-weight: bolder;
+				}
+				header::before
+				{
+					content: '#Header';
+					color:$wireframeColorLegend;
+					font-weight: bolder;
+				}
+				ul::before
+				{
+					content: '#Ul';
+					color:$wireframeColorLegend;
+					font-weight: bolder;
+				}
+				nav::before
+				{
+					content: '#Nav';
+					color:$wireframeColorLegend;
+					font-weight: bolder;
+				}
+				main::before
+				{
+					content: '#Main';
+					color:$wireframeColorLegend;
+					font-weight: bolder;
+				}
+
+			}
+			&#wireframe-fill
+			{
+				background-color: nth($wireframeColor,1);	
+				.container
+				{
+					background-color: nth($wireframeColor,2);	
+				}
+				.row
+				{
+					background-color: nth($wireframeColor,2);	
+				}
+				@for $y from 1 through $box
+				{
+					.fl-sm-#{$y} >
+					{
+						.fl-box-in
+						{
+							background-color: nth($wireframeColor,4);
+						}
+					}
+					.fl-flex-sm-#{$y} >
+					{
+						.fl-box-in
+						{
+							background-color: $wireframeFlex;
+						}
+					}
+				}
+				@for $i from 1 through 5
+				{
+					@media only screen and (min-width:nth($mediaQuery,$i))
+					{
+						@for $j from 1 through $box
+						{
+							.fl-#{nth($bp,($i+1))}-#{$j} >
+							{
+								.fl-box-in
+								{
+									background-color: nth($wireframeColor,($i+4));
+								}
+							}
+							.fl-flex-#{nth($bp,($i+1))}-#{$j} >
+							{
+								.fl-box-in
+								{
+									background-color: $wireframeFlex;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+}
+
+
+
+
+
+
