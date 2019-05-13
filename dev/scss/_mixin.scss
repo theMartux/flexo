@@ -67,6 +67,50 @@
 		height: 100%;
 	}
 }
+@mixin text()
+{
+	.text-left
+	{
+		text-align: left;
+	}
+	.text-center
+	{
+		text-align: center
+	}
+	.text-right
+	{
+		text-align: right;
+	}
+	.text-justify
+	{
+		text-align: justify;
+	}
+}
+@mixin images()
+{
+	img
+	{
+
+		&.align-center
+		{
+			margin: auto;
+		}
+		&.d-block
+		{
+			display: block;
+		}
+		&.align-left
+		{
+			margin-right: auto;
+			margin-left: 0;
+		}
+		&.align-right
+		{
+			margin-right: 0;
+			margin-left: auto;
+		}
+	}
+}
 @mixin box-small()
 {
 	
@@ -307,14 +351,18 @@
 	}
    
 }
-@mixin visibility($bp,$mStart,$mEnd)
+@mixin visibility($bp,$mStart)
 {
 	
-	@media only screen and (min-width:$mStart) and (max-width:$mEnd)
+	@media only screen and (min-width:$mStart)
 	{
 		.fl-#{$bp}-hidden
 		{
 			display: none;
+		}
+	    .fl-#{$bp}-show
+		{
+			display: block;
 		}
 	}
    

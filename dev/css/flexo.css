@@ -14,19 +14,7 @@ body, html {
   box-sizing: border-box; }
 
 div {
-  transition: width 300ms ease-in-out, margin-left 300ms ease-in-out, min-height 300ms ease-in-out; }
-
-img {
-  width: 100%;
-  display: block; }
-  img.align-center {
-    margin: auto; }
-  img.align-left {
-    margin-right: auto;
-    margin-left: 0; }
-  img.align-right {
-    margin-right: 0;
-    margin-left: auto; }
+  transition: width 300ms ease-in-out, margin-left 300ms ease-in-out, min-height 300ms ease-in-out, flex 300ms ease-in-out; }
 
 h1 {
   margin: 0; }
@@ -70,18 +58,6 @@ p {
 ul {
   padding: 0;
   margin: 0; }
-
-.text-left {
-  text-align: left; }
-
-.text-center {
-  text-align: center; }
-
-.text-right {
-  text-align: right; }
-
-.text-justify {
-  text-align: justify; }
 
 .container {
   width: 100%;
@@ -192,6 +168,32 @@ ul {
 
 .fill-height {
   height: 100%; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-justify {
+  text-align: justify; }
+
+img.align-center {
+  margin: auto; }
+
+img.d-block {
+  display: block; }
+
+img.align-left {
+  margin-right: auto;
+  margin-left: 0; }
+
+img.align-right {
+  margin-right: 0;
+  margin-left: auto; }
 
 .z-index-0 {
   z-index: 0; }
@@ -400,29 +402,41 @@ ul {
 .vph-sm-100 {
   min-height: 100vh; }
 
-@media only screen and (min-width: 0) and (max-width: 780px) {
+@media only screen and (min-width: 0) {
   .fl-sm-hidden {
-    display: none; } }
+    display: none; }
+  .fl-sm-show {
+    display: block; } }
 
-@media only screen and (min-width: 780px) and (max-width: 1240px) {
+@media only screen and (min-width: 780px) {
   .fl-md-hidden {
-    display: none; } }
+    display: none; }
+  .fl-md-show {
+    display: block; } }
 
-@media only screen and (min-width: 1240px) and (max-width: 1460px) {
+@media only screen and (min-width: 1240px) {
   .fl-lg-hidden {
-    display: none; } }
+    display: none; }
+  .fl-lg-show {
+    display: block; } }
 
-@media only screen and (min-width: 1460px) and (max-width: 1680px) {
+@media only screen and (min-width: 1460px) {
   .fl-sp-hidden {
-    display: none; } }
+    display: none; }
+  .fl-sp-show {
+    display: block; } }
 
-@media only screen and (min-width: 1680px) and (max-width: 1920px) {
+@media only screen and (min-width: 1680px) {
   .fl-mg-hidden {
-    display: none; } }
+    display: none; }
+  .fl-mg-show {
+    display: block; } }
 
-@media only screen and (min-width: 1920px) and (max-width: 5000px) {
+@media only screen and (min-width: 1920px) {
   .fl-ut-hidden {
-    display: none; } }
+    display: none; }
+  .fl-ut-show {
+    display: block; } }
 
 @media only screen and (min-width: 780px) {
   .fl-md-1 {
