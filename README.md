@@ -26,11 +26,11 @@ Use direct link or Download
 
 **Light css grid and wireframe based on flex property.**
 
-##Basic elements
+## Basic elements
 
 <p>
 There are five elements that build the grid.
-**Container**: this element contains all the rows and can have a fixed or fluid length.
+  <b>Container</b>: this element contains all the rows and can have a fixed or fluid length.
 **Row**: contains the box and can have a fixed or fluid length.
 **Box**: this element is the grid cell. can be fixed or flexible.
 **Box in**: is the contents of the cell. Here it is possible to insert other grids.
