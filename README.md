@@ -7,7 +7,7 @@ Flexo is a lightweight framework for page scaffolding using the css flex propert
 
 ## How to use it
 <p>Use direct link or Download</p>
-**Link dev(wireframe intergated)**
+**Link dev(wireframe intergated).**
 
 ```
 <link rel="stylesheet" href="http://davidemartucci.it/flexo/dev/css/flexo.css">
