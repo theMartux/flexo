@@ -1,7 +1,7 @@
 {
   "name": "Flexo",
   "version": "1.0.0",
-  "description": "Light grid based on CSS Flex rule.",
+  "description": "Light css grid and wireframe based on flex property.",
   "main": "index.js",
   "repository": "https://github.com/theMartux/flexo.git",
   "author": "theMartux <work@davidemartucci.it>",
