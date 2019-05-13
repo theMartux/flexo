@@ -60,10 +60,10 @@ With flexo you can use the wireframe and check the boxes you use during the chan
 
 <p>
 The documentation allows you to better understand how to use Flexo classes.<br />Watch the tutorials to learn more.
-[Link](http://davidemartucci.it/flexo/documentation)
+<a href="http://davidemartucci.it/flexo/documentation" title="Doc Flexo">Documentation</a>
 </p>
 
-[foo] :/url "title" [foo]
+
 
 
 
