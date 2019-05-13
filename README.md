@@ -56,5 +56,13 @@ With flexo you can use the wireframe and check the boxes you use during the chan
 
 ![image](http://davidemartucci.it/flexo/img/grid-wireframe.png)
 
+## Documentation
+
+<p>
+The documentation allows you to better understand how to use Flexo classes.<br />Watch the tutorials to learn more.
+</p>
+[Link](http://davidemartucci.it/flexo/documentation)
+
+
 
 
