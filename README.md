@@ -31,6 +31,7 @@ On the Flexo site it is possible to configure the .css file
 <p>
 There are five elements that build the grid.
 </p>
+
 * <b>Container</b>: this element contains all the rows and can have a fixed or fluid length.
 
 * <b>Row</b>:  contains the box and can have a fixed or fluid length.
@@ -46,6 +47,14 @@ There are five elements that build the grid.
 ![image](http://davidemartucci.it/flexo/img/ex-grid.png)
 
 ## Wireframe
+
+<p>
+With flexo you can use the wireframe and check the boxes you use during the changing of the device lengths. You should add the wireframe id in the body tag.
+</p>
+
+---
+
+![image](http://davidemartucci.it/flexo/img/grid-wireframe.png)
 
 
 
