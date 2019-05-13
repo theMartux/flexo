@@ -59,11 +59,12 @@ function cssFlexoDev(done)
 	done();
 }
 
+
 function zipFlexo(done) 
 {
-	src([paths.download + '/dist/css/*.css',paths.download + '/dev/**/*.*'],{base: './'})
+	src([paths.download + 'flexo/dist/css/*.css', paths.download + '/flexo/dev/**/*.*'],{base: './download/flexo'})
 	    .pipe(zip('flexo.zip'))
-		.pipe(dest(paths.download));
+		.pipe(dest(paths.download+'flexo'));
 
 	done();
 }
