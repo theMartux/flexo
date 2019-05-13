@@ -30,11 +30,7 @@ Use direct link or Download
 
 <p>
 There are five elements that build the grid.
-  <b>Container</b>: this element contains all the rows and can have a fixed or fluid length.
-**Row**: contains the box and can have a fixed or fluid length.
-**Box**: this element is the grid cell. can be fixed or flexible.
-**Box in**: is the contents of the cell. Here it is possible to insert other grids.
-**Flex**: is the basic flex property.
----
-Emmet:div.container.fluid>div.row.wrap>div.fl-box.fl-sm-12>div.fl-box-in{content}
 </p>
+* <b>Container</b>: this element contains all the rows and can have a fixed or fluid length.
+* List
+* List
