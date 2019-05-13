@@ -63,7 +63,9 @@ The documentation allows you to better understand how to use Flexo classes.<br /
 [Link](http://davidemartucci.it/flexo/documentation)
 </p>
 
-[foo]:/url "title"[foo]
+[foo] :/url "title" [foo]
+
+
 
 
 
