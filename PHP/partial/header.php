@@ -4,11 +4,11 @@
 				<div class="fl-box fl-sm-4">
 					<div class="fl-box-in">
 						<a href="<?php echo $base_url ?>" title="Flexo">
-							<img id="logo-flexo" src="<?php echo $base_url ?>/img/flexo-logo-dark.png" alt="Flexo css logo" title="Flexo css logo"/>
+							<img id="logo-flexo" src="<?php echo $base_url ?>/img/flexo-logo-dark.png" alt="Flexo logo" title="Flexo logo"/>
 						</a>
 					</div>
 				</div>
-				<div class="fl-box fl-sm-4 fl-sm-offset-4 fl-lg-7 fl-lg-offset-1 text-right fl-sm-hidden fl-md-hidden">
+				<div class="fl-box fl-sm-4 fl-sm-offset-4 fl-lg-7 fl-lg-offset-1 text-right fl-sm-hidden fl-lg-show">
 					<div class="fl-box-in">
 						<nav>
 							<ul>

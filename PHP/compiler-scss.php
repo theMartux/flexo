@@ -1,7 +1,19 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors',1);
+error_reporting(0);
+ini_set('display_errors',0);
+session_start();
+require_once('./config.php');
+$_SESSION['error_input']    = 0;
+$_SESSION['form_customize'] = $_POST;
+
+
 //################################### check post #############################
+if(in_array('',$_POST))
+{
+	$_SESSION['error_input'] = 1;
+	header("Location: {$base_url}/customize");
+	exit();
+}
 $dev_min           = filter_input(INPUT_POST,'dev_min',FILTER_SANITIZE_STRING);
 $c_box             = filter_input(INPUT_POST,'box',FILTER_SANITIZE_STRING);
 $mq_medium         = filter_input(INPUT_POST,'media-query-md',FILTER_SANITIZE_STRING);
@@ -16,6 +28,7 @@ $transition_time   = filter_input(INPUT_POST,'transition-time',FILTER_SANITIZE_S
 $transition_easing = filter_input(INPUT_POST,'transition-easing',FILTER_SANITIZE_STRING);
 $overflow          = filter_input(INPUT_POST,'overflow-x',FILTER_SANITIZE_STRING);
 $c_Z_index         = filter_input(INPUT_POST,'level-z-index',FILTER_SANITIZE_STRING);
+
 if($dev_min == 'dev'){$wireframe_status = 1;};
 if($dev_min == 'min'){$wireframe_status = 0;};
 
@@ -74,12 +87,14 @@ $scss_content_custom = str_replace('@import "_config.scss";','@import "_config-c
 //############################################### scss ###############################################
 try 
 {
-   $wireframe   = '@include wireframe();';
-   $scss_output = $scss->compile($scss_content_custom);
+   	$wireframe   = '@include wireframe();';
+   	$scss_output = $scss->compile($scss_content_custom);
 } 
 catch(Exception $e) 
 {
-    echo 'Error scss compiler!';
+   	$_SESSION['error_input'] = 1;
+	header("Location: {$base_url}/customize");
+	exit();
 }
 
 //############################################### scss ###############################################
@@ -100,16 +115,7 @@ fwrite($fp, $CSS);
 fclose($fp);
 if($fp)
 {
-	header("Content-type: Application/octet-stream");
-	header("Content-Disposition: attachment; filename={$nameFile}");
-	header("Content-Description: Download css generato");
-	readfile($nameFile);
-	$dn_file = 1;
+	$_SESSION['name_file']   = $nameFile;
+	header("Location: {$base_url}/customize");
+	
 }
-if($dn_file == 1)
-{
-	unlink($nameFile);
-}
-
-
-
