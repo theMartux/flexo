@@ -1,6 +1,8 @@
 /* CSS Flexo */
 @import "_config.scss";
 @import "_mixin.scss";
+
+
 body,html
 {
 	margin: 0;
@@ -31,28 +33,10 @@ body,html
 	{
 		transition: width $transitionTime $transitionEasing,
 			        margin-left $transitionTime $transitionEasing,
-			        min-height $transitionTime $transitionEasing;
+			        min-height $transitionTime $transitionEasing,
+			        flex $transitionTime $transitionEasing;
 	}
 	
-}
-img
-{
-	width: 100%;
-	display: block;
-	&.align-center
-	{
-		margin: auto;
-	}
-	&.align-left
-	{
-		margin-right: auto;
-    	margin-left: 0;
-	}
-	&.align-right
-	{
-		margin-right: 0;
-    	margin-left: auto;
-	}
 }
 @for $j from 1 through $box
 {
@@ -70,34 +54,26 @@ ul
 	padding: 0;
 	margin: 0;
 }
-.text-left
-{
-	text-align: left;
-}
-.text-center
-{
-	text-align: center
-}
-.text-right
-{
-	text-align: right;
-}
-.text-justify
-{
-	text-align: justify;
-}
+
+
+
 @include flexBox();
 @include positioningAndFill(); 
+@include text();
+@include images();
 @include z-index();
 @include box-flex-sm();
 @include box-small();
 @include height-vp-sm();
-@include visibility(sm,0,nth($mediaQuery,1));
-@include visibility(md,nth($mediaQuery,1),nth($mediaQuery,2));
-@include visibility(lg,nth($mediaQuery,2),nth($mediaQuery,3));
-@include visibility(sp,nth($mediaQuery,3),nth($mediaQuery,4));
-@include visibility(mg,nth($mediaQuery,4),nth($mediaQuery,5));
-@include visibility(ut,nth($mediaQuery,5),$mediaQueryMAX);
+@include visibility(sm,0);
+@include visibility(md,nth($mediaQuery,1));
+@include visibility(lg,nth($mediaQuery,2));
+@include visibility(sp,nth($mediaQuery,3));
+@include visibility(mg,nth($mediaQuery,4));
+@include visibility(ut,nth($mediaQuery,5));
+
+
+
 @media only screen and (min-width:nth($mediaQuery,1))
 {
 	@include box-medium();
@@ -141,26 +117,9 @@ ul
 	@include box-flex-ut();
 	@include height-vp-ut();
 }
+
+
+
 //######################## WIREFRAME MODULE !SOLO DEV!########################
 @include wireframe();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
