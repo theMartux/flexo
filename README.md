@@ -6,6 +6,6 @@ Flexo is a lightweight framework for page scaffolding using the css flex propert
 </p>
 
 ## How to use it
-### Use direct link or Download
+..Use direct link or Download..
 
 
