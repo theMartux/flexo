@@ -16,7 +16,7 @@ h1
 }
 main
 {
-	padding: 110px 25px;
+	padding: 90px 25px;
 	margin-top: 10px
 }
 h1
@@ -35,7 +35,7 @@ h3
 	color: #AA41C8;
 	font-size: 1rem;
 	font-weight: 400;
-	margin-top: 40px
+	margin-top: 15px
 }
 h4
 {
@@ -47,7 +47,13 @@ p
 {
 	color: #666;
 	font-size: 0.9rem;
-	margin-top: 15px;
+	margin-top: 0px;
+}
+input:focus
+{
+	outline: none ;
+	box-shadow: 0px 0px 5px #AA41C8;
+	border: 1px solid #AA41C8 !important;
 }
 a.link-int,.input-submit
 {
@@ -59,6 +65,7 @@ a.link-int,.input-submit
 	color: #AA41C8;
 	margin-top: 15px;
 	font-weight: 700;
+	font-size: 0.8rem;
 }
 a.link-int.checked
 {
@@ -69,6 +76,10 @@ a.link-int.checked
 a.link-int.doc
 {
 	margin: 10px 0;
+}
+.overflow-hidden
+{
+	overflow: hidden;
 }
 .no-border
 {
@@ -84,7 +95,7 @@ a.link-int.doc
 }
 #int
 {
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 .box-conatiner-box .fl-box-in
 {
@@ -123,6 +134,7 @@ h5
 	padding: 20px;
 	color: #fff;
 }
+
 ul
 {
 	margin: 0;
@@ -179,12 +191,12 @@ label
 footer
 {
 	background-color: #fff;
-	padding: 30px 0px;
-	margin-top: 50px;
+	padding: 0px 0px 30px 0px;
+	margin-top: 0px;
 }
 footer img
 {
-	width: 150px;
+	width: 110px;
 	margin: auto;
 	display: block;
 }
@@ -236,6 +248,26 @@ footer p
 {
 	background-color: #f8f8f8;
 }
+#tutorial-s h1
+{
+	color: #7D96FF;
+}
+#tutorial h3
+{
+	margin-top: 0;
+}
+video
+{
+	width: 100%;
+	outline: none;
+	box-shadow: none;
+}
+#error-customize
+{
+	background-color: #7D96FF;
+	color: #fff;
+	padding: 5px 15px;
+}
 @media only screen and (min-width:780px)
 {
 	header
@@ -254,7 +286,7 @@ footer p
 	main
 	{
 		padding: 20px;
-		margin-top: 40px
+		margin-top: 80px
 	}
 	h1
 	{
@@ -268,6 +300,7 @@ footer p
 	{
 		font-size: 1.2rem;
 		font-weight: 700;
+		margin-top: 25px;
 	}
 	h4
 	{
@@ -283,6 +316,14 @@ footer p
 	{
 		margin-bottom: 40px
 	}
+	.box-conatiner-box 
+	{
+		margin-top: 0;
+	}
+	footer
+	{
+		margin-top: 10px;
+	}
 }
 @media only screen and (min-width:1240px)
 {
@@ -292,7 +333,7 @@ footer p
 	}
 	main
 	{
-		margin-top: 60px
+		margin-top: 150px
 	}
 	#logo-flexo
 	{
@@ -320,6 +361,15 @@ footer p
 	{
 		margin-bottom: 50px
 	}
+	a.link-int, .input-submit 
+	{
+		padding: 15px 40px;
+		font-size: 1rem;
+	}
+	#tutorial h3
+	{
+		margin-top: 20px;
+	}
 	
 }
 @media only screen and (min-width:1460px)
@@ -334,8 +384,17 @@ footer p
 	}
 	main
 	{
-		margin-top: 100px
+		margin-top: 180px
 	}
+	#tutorial p
+	{
+		margin-top: 10px;
+	}
+	#tutorial h3
+	{
+		margin-top: 25px;
+	}
+	
 }
 @media only screen and (min-width:1680px)
 {
@@ -345,7 +404,7 @@ footer p
 	}
 	main
 	{
-		margin-top: 150px
+		margin-top: 200px
 	}
 	#logo-flexo
 	{
@@ -359,6 +418,10 @@ footer p
 	{
 		font-size: 1.7rem;
 		margin-top: 0px;
+	}
+	h3
+	{
+		margin-top: 50px
 	}
 	p
 	{
@@ -376,6 +439,14 @@ footer p
 		margin-top: 20px;
 		font-weight: 700;
 		font-size: 1.1rem;
+	}
+	footer 
+	{
+		padding: 20px 0px 50px 0px;
+	}
+	#tutorial h3
+	{
+		margin-top: 30px;
 	}
 	
 }

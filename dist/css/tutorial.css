@@ -1,0 +1,23 @@
+body
+{
+}
+.container
+{
+	padding: 10px;
+	
+}
+.row
+{
+	padding: 10px;
+}
+.fl-box-in
+{
+	color: #000;
+	min-height: 70px;
+}
+p
+{
+	color: #fff;
+	margin-bottom: 10px;
+}
+
