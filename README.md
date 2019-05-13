@@ -42,9 +42,10 @@ There are five elements that build the grid.
 
 * <b>Flex</b>: is the basic flex property.
 
----
 
 ![image](http://davidemartucci.it/flexo/img/ex-grid.png)
+
+---
 
 ## Wireframe
 
@@ -52,9 +53,10 @@ There are five elements that build the grid.
 With flexo you can use the wireframe and check the boxes you use during the changing of the device lengths. You should add the wireframe id in the body tag.
 </p>
 
----
 
 ![image](http://davidemartucci.it/flexo/img/grid-wireframe.png)
+
+---
 
 ## Documentation
 
@@ -63,7 +65,6 @@ The documentation allows you to better understand how to use Flexo classes.<br /
 <a href="http://davidemartucci.it/flexo/documentation" title="Doc Flexo">Documentation</a>
 </p>
 
----
 
 <img width="120" src="http://davidemartucci.it/flexo/img/flexo-logo-dark.png"/>
 
