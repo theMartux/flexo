@@ -65,8 +65,8 @@ The documentation allows you to better understand how to use Flexo classes.<br /
 
 ---
 
+<img width="120" src="http://davidemartucci.it/flexo/img/flexo-logo-dark.png"/>
 
-![image](http://davidemartucci.it/flexo/img/flexo-logo-dark.png)
 
 
 
