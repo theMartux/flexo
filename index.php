@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<title>FLEXO</title>
 	<meta name="viewport"  content="width=device-width,initial-scale=1.0">
-	<link rel="stylesheet" href="dist/css/flexo.min.css" />
-	<link rel="stylesheet" href="dist/css/main.css" />
-	<link rel="stylesheet" href="dist/lib/rainbow/styles/blackboard.css" />
+	<link rel="stylesheet" href="<?php echo $base_url; ?>/dist/css/flexo.min.css" />
+	<link rel="stylesheet" href="<?php echo $base_url; ?>/dist/css/main.css" />
+	<link rel="stylesheet" href="<?php echo $base_url; ?>/dist/lib/rainbow/styles/blackboard.css" />
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	
@@ -38,9 +38,9 @@
 									</p>
 								</div>
 							</div>
-							<div class="fl-box fl-sm-10 fl-md-8">
+							<div class="fl-box fl-sm-10 fl-md-12">
 								<div class="fl-box-in">
-									<a class="link-int" href="download/flexo.zip" title="Download Flexo" download><i class="fas fa-download"></i> Download</a>
+									<a class="link-int" href="<?php echo $base_url; ?>/download/flexo/flexo.zip" title="Download Flexo" download><i class="fas fa-download"></i> Download</a>
 									<a class="link-int" href="<?php echo $base_url ?>/customize" title="Customize Flexo"><i class="fas fa-sliders-h"></i> Customize</a>
 									<a class="link-int" href="https://github.com/theMartux/flexo" title="Flexo o Github"><i class="fab fa-github"></i> GitHub</a>
 								</div>
@@ -52,18 +52,18 @@
 									Installation
 								</h3>
 								<h4>
-									Use CDN or Download
+									Use direct link or Download
 								</h4>
 							</div>
 						</div>
 						<div class="fl-box fl-sm-12" >
 							<div class="fl-box-in">
-								<strong>CDN dev</strong>
+								<strong>Link dev(wireframe intergated)</strong>
 								<div class="fill-width box-conatiner-code">
 									
 <pre>
 <code data-language="html">
-<link rel="stylesheet" href="davidemartucci.it/flexo/dist/css/flexo.min.css" />
+<link rel="stylesheet" href="http://davidemartucci.it/flexo/dev/css/flexo.css" />
 </code>
 </pre>
 								</div>
@@ -71,12 +71,12 @@
 						</div>
 						<div class="fl-box fl-sm-12" >
 							<div class="fl-box-in">
-								<strong>CDN dist</strong>
+								<strong>Link dist(minify)</strong>
 								<div class="fill-width box-conatiner-code">
 									
 <pre>
 <code data-language="html">
-<link rel="stylesheet" href="davidemartucci.it/flexo/dev/css/flexo.css" />
+<link rel="stylesheet" href="http://davidemartucci.it/flexo/dist/css/flexo.min.css" />
 </code>
 </pre>
 								</div>
@@ -726,7 +726,7 @@
 									<div class="container fluid">
 										<div class="row  wrap fluid">
 											<div class="fl-box fl-sm-12 fl-lg-6">
-												<div class="fl-box-in" style="height: 200px;">
+												<div class="fl-box-in overflow-hidden" style="height: 200px;">
 													<div class="position-relative fill-width" >
 														<div class="position-absolute absolute-ex" style="width: 200px;top: 30px;left: 50px">
 															z-index 1
@@ -741,7 +741,7 @@
 												</div>
 											</div>
 											<div class="fl-box fl-sm-12 fl-lg-6">
-												<div class="fl-box-in" style="height: 200px;">
+												<div class="fl-box-in overflow-hidden" style="height: 200px;">
 													<div class="position-relative fill-width" >
 														<div class="position-absolute absolute-ex z-index-2" style="width: 200px;top: 30px;left: 50px">
 															z-index 2
@@ -811,7 +811,7 @@
 													1
 												</div>
 											</div>
-											<div class="fl-box fl-sm-4 fl-sm-hidden fl-md-hidden fl-mg-hidden fl-ut-hidden">
+											<div class="fl-box fl-sm-4 fl-sm-hidden fl-lg-show fl-mg-hidden  fl-ut-hidden">
 												<div class="fl-box-in">
 													2
 												</div>
@@ -862,7 +862,7 @@
 		</div>
 	</main>
 	<?php require_once('PHP/partial/footer.php') ?>
-	<script src="dist/lib/rainbow/rainbow-custom.min.js"></script>
+	<script src="<?php echo $base_url; ?>/dist/lib/rainbow/rainbow-custom.min.js"></script>
 </body>
 </html>
 
