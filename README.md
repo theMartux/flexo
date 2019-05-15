@@ -26,6 +26,20 @@ On the Flexo site it is possible to configure the .css file!
 <link rel="stylesheet" href="http://davidemartucci.it/flexo/dist/css/flexo.min.css">
 ```
 
+**Npm**
+
+
+```
+npm install @the_martux/flexo -D
+```
+
+**Yarn**
+
+
+```
+yarn add @the_martux/flexo -D
+```
+
 
 ## Basic elements
 
