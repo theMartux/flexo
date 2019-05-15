@@ -84,6 +84,39 @@
 						</div>
 						<div class="fl-box  fl-sm-12" >
 							<div class="fl-box-in">
+								<h4>
+									Use dependence
+								</h4>
+							</div>
+						</div>
+						<div class="fl-box fl-sm-12" >
+							<div class="fl-box-in">
+								<strong>NPM</strong>
+								<div class="fill-width box-conatiner-code">
+									
+<pre>
+<code data-language="html">
+npm install @the_martux/flexo -D
+</code>
+</pre>
+								</div>
+							</div>
+						</div>
+						<div class="fl-box fl-sm-12" >
+							<div class="fl-box-in">
+								<strong>YARN</strong>
+								<div class="fill-width box-conatiner-code">
+									
+<pre>
+<code data-language="html">
+yarn add @the_martux/flexo -D
+</code>
+</pre>
+								</div>
+							</div>
+						</div>
+						<div class="fl-box  fl-sm-12" >
+							<div class="fl-box-in">
 								<h3>
 									Basic elements
 								</h3>
@@ -839,7 +872,7 @@
             1
          </div>
       </div>
-      <div class="fl-box fl-sm-4 fl-sm-hidden fl-md-hidden fl-mg-hidden fl-ut-hidden">
+      <div class="fl-box fl-sm-4 fl-sm-hidden fl-lg-show fl-mg-hidden  fl-ut-hidden">
          <div class="fl-box-in">
            large and super are visibles;
          </div>
