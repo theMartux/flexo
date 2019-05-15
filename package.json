@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/theMartux/flexo.git",
   "author": "theMartux <work@davidemartucci.it>",
-  "license": "Davide Martucci",
+  "license": "BSD-2",
   "dependencies": {
     "gulp": "^4.0.0",
     "gulp-zip": "^4.2.0"
