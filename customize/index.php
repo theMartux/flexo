@@ -191,6 +191,7 @@ if(isset($_SESSION['name_file']))
 			</div>
 		</div>
 	</main>
+	<?php require_once('../PHP/partial/footer.php') ?>
 	<script src="<?php echo $base_url ?>/dist/js/customize.js"></script>
 </body>
 </html>
