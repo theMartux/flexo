@@ -207,6 +207,10 @@ footer p
 	text-align: center;
 	margin-top: 0px
 }
+.display-none
+{
+	display: none;
+}
 .doc-sx,.doc-dx
 {
 	background-color: #333;

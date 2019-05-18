@@ -133,19 +133,19 @@ if(isset($_SESSION['name_file']))
 											<div class="fl-box fl-sm-4 fl-lg-3 fl-mg-2">
 												<div class="fl-box-in no-padding">
 													<label>Transition *</label>
-													<input class="input" type="text" name="transition" placeholder="Default 1" <?php csz_sess('transition'); ?> />
+													<input id="transition-c" class="input" type="text" name="transition" placeholder="Default 1" <?php csz_sess('transition'); ?> />
 												</div>
 											</div>
 											<div class="fl-box fl-sm-4 fl-lg-3">
-												<div class="fl-box-in no-padding">
+												<div class="fl-box-in no-padding" id="transition-time-c">
 													<label>Transition time *</label>
-													<input class="input" type="text" name="transition-time" placeholder="Default 300ms" <?php csz_sess('transition-time'); ?> />
+													<input id="transition-time-c-input" class="input" type="text" name="transition-time" placeholder="Default 300ms" <?php csz_sess('transition-time'); ?> />
 												</div>
 											</div>
 											<div class="fl-box fl-sm-4 fl-lg-3">
-												<div class="fl-box-in no-padding">
+												<div class="fl-box-in no-padding" id="transition-ease-c">
 													<label>Transition easing *</label>
-													<input class="input" type="text" name="transition-easing" placeholder="Default ease-in-out" <?php csz_sess('transition-easing'); ?> />
+													<input id="transition-ease-c-input" class="input" type="text" name="transition-easing" placeholder="Default ease-in-out" <?php csz_sess('transition-easing'); ?> />
 												</div>
 											</div>
 											<div class="fl-box fl-sm-12">
