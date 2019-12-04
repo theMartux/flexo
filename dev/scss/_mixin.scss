@@ -135,6 +135,10 @@
 			margin-left: $i/$box*100%;
 		}
 	}
+    .fl-sm-offset-0
+		{
+        margin-left: 0;
+		}
 }
 @mixin box-medium()
 {
