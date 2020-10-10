@@ -1,16 +1,16 @@
-$box:12;
+$box:16;
 $bp:sm,md,lg,sp,mg,ut;
-$mediaQuery:640px,1024,1280px,1460px,1820px;
+$mediaQuery:780px,1240px,1460px,1680px,1920px;
 $mediaQueryMAX:5000px;
-$flBoxPadding:50px 5px;
-$flBoxPaddingIn:8px 8px;
+$flBoxPadding:3px 3px;
+$flBoxPaddingIn:10px 10px;
 $startFlexWidth:8.333333333;
 $transition:1;
-$transitionTime:100ms;
-$transitionEasing:ease-out;
+$transitionTime:0;
+$transitionEasing:0;
 $containerOverflowX_hidden:1;
-$Z_index:0,10;
+$Z_index:0,16;
 $wireframeColor: #333333,indigo,#BBB6FF,#5114E5,#3A8EFF,#C129E9,#2942E9,#FFCC00,#00FFF6;
 $wireframeColorLegend: #333333;
 $wireframeFlex:  #CCDD22;
-$wireframeStatus:0
+$wireframeStatus:0;

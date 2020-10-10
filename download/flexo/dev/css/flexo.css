@@ -154,10 +154,10 @@ ul {
   height: 100vh; }
 
 .fill-vp-h {
-  width: 100vw; }
+  width: 100vh; }
 
 .fill-vp-v {
-  height: 100vw; }
+  height: 100vh; }
 
 .fill {
   width: 100%;
@@ -371,6 +371,9 @@ img.align-right {
 
 .fl-sm-offset-12 {
   margin-left: 100%; }
+
+.fl-sm-offset-0 {
+  margin-left: 0; }
 
 .vph-sm-10 {
   min-height: 10vh; }
